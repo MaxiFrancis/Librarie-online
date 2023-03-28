@@ -1,0 +1,135 @@
+<html>
+<head>
+<style>
+body
+	{
+		background: #000;
+	}
+.continut
+	{
+		position: relative;
+		width: 500px;
+		padding: 50px;
+		background: #111011;
+		top: 100px;
+	}
+.continut h1
+	{
+		color: #fff;
+		margin-bottom: 50px;
+		font-family: Arimo;
+	}	
+.input
+	{
+		position: relative;
+		width: 100%;
+		height: 40px;
+	}
+.input input[type="text"]
+	{
+		position: absolute;
+		background: transparent;
+		border: none;
+		box-shadow: none;
+		font size: 20px;
+		color: #fff;
+		width: 100%;
+		height: 35px;
+	}
+.input label
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: #555;
+		pointer-events: none;
+		display: block;
+		transition: 0.5s;
+	}
+.input input[type="text"]:focus + label,
+.input input[type="text"]:valid + label
+	{
+		transform: translateY(-30px);
+		font-size: 16px;
+		color: #fff;
+		background: #ff006a;
+		padding: 3px 7px;
+	}
+.input span
+	{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: block;
+		background: #fff;
+		width: 100%;
+		height: 2px;
+	}	
+.input span:before
+	{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #00b0ff;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.5s ease-in-out; 
+	}
+.input input[type="text"]:focus ~ span:before,
+.input input[type="text"]:valid ~ span:before
+	{
+		transform: scaleX(1);
+		transform-origin: left;
+		transition: transform 0.5s ease-in-out; 
+	}
+.btn
+	{
+		margin-top: 20px;
+		border: none;
+		box-shadow: none;
+		padding: 10px 25px;
+		background: #fff;
+		color: #000;
+		font size 20px;
+		cursor: pointer;
+	}
+.btn:hover
+	{
+		background: #d7239e;
+	}
+.erorr
+	{
+		color: #d7239e;
+	}
+</style>
+
+</head>
+<body>
+<div align="center">
+	<div class="continut" align="justify">
+		<h1 align="center">Bine ai venit pe YouShop</h1>
+			<br>
+			<form method="post" action="http://localhost/log.php">
+				<div class="input">
+					<input type="text" name="name" required="">
+					<label>Introduce username</label>
+					<span></span>
+				</div>
+			<br>
+			<br>
+				<div class="input">
+					<input type="text" name="pwd" required="">
+					<label>Introduce parola</label>
+					<span></span>
+
+				</div>
+				<input type="submit" value=" Conecteaz&#259;-te " class="btn">
+			</form>
+		<div class="erorr" align="right">
+		
+	
+</body>
+</html>
